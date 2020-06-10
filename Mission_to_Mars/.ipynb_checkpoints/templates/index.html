@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission Mars!</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+      .button {
+          background-color: #4CAF50;
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+      }
+      </style>
+</head>
+​
+<body>
+  <div class="container ">
+​
+    <div class="jumbotron text-center">
+      <h1>Mission TO Mars</h1>
+    <a href="/scrape" class="button">Scrape Mars Data</a>
+    </div>  
+    <!-- <ul>
+      <li>{{dict['News title']}}</li>
+      <li>{{dict['News Paragraph']}}</li>
+      <li><img src={{dict.Mars_Hemispheres_urls[0].img_url}} alt=""></li>
+    </ul> -->
+    <div class = "row" id="mars-news">
+      <div class = col-md-12>
+        <h2>  Latest Mars News</h2>
+          <ul>
+              <li>{{dict['News title']}}</li>
+              <li>{{dict['News Paragraph']}}</li>
+          </ul>
+      </div>    
+    </div>
+​
+    <div class ="row" id = "Mars Featured Image" >
+      <div class = "col-md-8">
+        <h2>Featured MARS Image</h2>
+        <img src={{dict.Featured_image_url}} alt="">
+      </div>
+​
+      <div class = "col-md-4">
+​
+        <div class  = "row" id = "Mars-Weather">
+            <div class ="col-md-12">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <h4>Mars Current Weather</h4>
+                    <p>{{dict.mars_weather}}</p>
+                  </div>
+                </div>  
+            </div>
+        </div>  
+        <div class  = "row" id = "Mars-facts">
+            <div class ="col-md-12">
+              <h4>Mars Facts</h4>
+              <p>{{dict.Facts}}</p>
+            </div>
+          </div>  
+​
+      </div>
+     </div>  
+​
+     <div class = "row" id = "mars-hemisphere">
+        <h2 class="text-center"> Mars Hemisphere </h2>
+        <p>{{dict.hemi_imglist}}</p>
+     </div>
+​
+  </div>
+​
+​
+    
+</body>  
+</html>  
+Collapse
+
+
+
